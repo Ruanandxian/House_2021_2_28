@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/title_bar_head"
+        app:layout_collapseMode="parallax" />
+
+    <com.hjq.bar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:barStyle="ripple"
+        app:layout_collapseMode="pin" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/blackPrimary"
+            android:orientation="vertical">
+
+            <com.example.house.view.RoundedImageView
+                android:id="@+id/tou"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="45dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="80dp"
+                android:maxHeight="80dp"
+                android:src="@drawable/touxiang"></com.example.house.view.RoundedImageView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nicheng"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="山河"
+                    android:textColor="@color/wheat"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:id="@+id/sushe"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="3-132"
+                    android:textColor="@color/wheat"
+                    android:textSize="12dp"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--        条目-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/wo_1"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wo_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="昵称修改"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/wo_1_q"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+
+        <!--                提交-->
+        <LinearLayout
+            android:id="@+id/wo_1_l"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:visibility="gone">
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:id="@+id/wo_1_M"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mtf_image="@mipmap/duanxin"
+                app:mtf_labelColor="#666"
+                tools:ignore="MissingConstraints">
+
+
+                <EditText
+                    android:id="@+id/wo_1_e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="-.- 新的昵称"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wo_1_l2"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/wo_1_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取消"
+                    app:backgroundTint="#00BCD4"></Button>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/wo_1_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确认"
+                    app:backgroundTint="#2196F3"></Button>
+            </LinearLayout>
+        </LinearLayout>
+        <!--提交结束-->
+
+
+        <!--        条目-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/wo_7"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wo_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="QQ添加"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/wo_6_7"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+
+        <!--        条目-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/wo_2"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wo_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="切换账号"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/wo_2_q"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+
+        <!--        条目-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/wo_3"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wo_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="今日定位"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/wo_3_q"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+        <LinearLayout
+            android:id="@+id/wo_3_l"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/wo_3_1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/dingwei_false"></ImageView>
+
+            <TextView
+                android:id="@+id/wo_3_2"
+                android:layout_width="290dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="未定位"
+                android:textColor="@color/black"></TextView>
+
+            <ImageView
+                android:id="@+id/wo_3_3"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/shuaxin"></ImageView>
+
+        </LinearLayout>
+
+
+        <!--        条目-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/wo_4"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wo_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="修改密码"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/wo_4_q"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+
+        <!--                提交-->
+        <LinearLayout
+            android:id="@+id/wo_4_l"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:visibility="gone">
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:id="@+id/wo_4_M"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mtf_image="@mipmap/duanxin"
+                app:mtf_labelColor="#666"
+                tools:ignore="MissingConstraints">
+
+
+                <EditText
+                    android:id="@+id/wo_4_e"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="-.- 新的密码"
+                    android:textColor="#333"
+                    android:textSize="15sp" />
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wo_4_l2"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/wo_4_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取消"
+                    app:backgroundTint="#00BCD4"></Button>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/wo_4_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确认"
+                    app:backgroundTint="#2196F3"></Button>
+            </LinearLayout>
+        </LinearLayout>
+        <!--提交结束-->
+
+
+        <!--        条目-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/wo_5"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wo_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="问题反馈"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/wo_5_q"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+
+        <LinearLayout
+            android:id="@+id/wo_5_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/wo_5_checkBox"
+                android:layout_width="289dp"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="House"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/wo_5_headimage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/laji"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/wo_5_tv"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="暂无"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:visibility="gone"></TextView>
+
+
+        <!--        条目-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/wo_6"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wo_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="管理页面"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/wo_6_q"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

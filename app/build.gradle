@@ -1,0 +1,123 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            keyPassword 'xiaoruan0913'
+            storeFile file('C:\\Users\\12046\\House.jks')
+            storePassword 'xiaoruan0913'
+        }
+
+        debug {
+            keyAlias 'key0'
+            keyPassword 'xiaoruan0913'
+            storeFile file('C:\\Users\\12046\\House.jks')
+            storePassword 'xiaoruan0913'
+        }
+    }
+
+
+    defaultConfig {
+        applicationId "com.example.house"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            minifyEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            debuggable true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    //android studio 4.0 以上打包会出现这个问题
+    lintOptions { checkReleaseBuilds false }
+
+
+
+
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    }
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation files('libs\\AMap3DMap_7.8.0_AMapSearch_7.7.0_20201231.jar')
+//    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+//1.底部导航栏
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'com.github.Vincent7Wong:EasyNavigation:2.0.5'
+//2.login
+    implementation 'com.github.florent37:materialtextfield:1.0.7'
+//3.状态栏
+    implementation 'org.zackratos:ultimatebar:1.0.3'
+//4.提示
+    implementation 'com.github.johnpersano:supertoasts:2.0'
+//5.网络请求
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+//6.标题栏
+    implementation 'com.hjq:titlebar:8.2'
+    implementation 'com.google.android.material:material:1.0.0'
+//7.对话框
+    implementation 'com.bigkoo:alertview:1.0.3'
+//8.条目
+//    implementation 'com.leon:lsettingviewlibrary:1.7.0'
+//9.选择照片
+    implementation 'com.github.wildma:PictureSelector:2.1.0'
+    implementation 'com.zhihu.android:matisse:0.5.2-beta2'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+//10.tab
+    implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
+    implementation'com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar'
+//10.folding-cell
+    implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
+//11.Gson
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation 'com.android.support:multidex:1.0.0'
+//12.下拉刷新
+    implementation'com.yalantis:phoenix:1.2.3'
+//13.搜索框
+//    implementation'com.miguelcatalan:materialsearchview:1.4.0'
+    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
+//14.屏幕适配
+    implementation 'me.jessyan:autosize:1.2.1'
+    implementation project(':library')
+
+}

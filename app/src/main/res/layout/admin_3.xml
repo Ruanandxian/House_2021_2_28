@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:htext="http://schemas.android.com/apk/res-auto"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cjj.sva.JJSearchView
+        android:id="@+id/jjsv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="107dp"
+        android:background="@color/color_121" />
+    <!--60，，260-->
+
+    <EditText
+        android:id="@+id/admin_1t"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="105dp"
+        android:background="@null"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColor="@color/bluePrimaryLight"
+        android:textCursorDrawable="@drawable/shape_et_cursor"
+        android:theme="@style/MyEditText"
+        android:visibility="gone">
+
+    </EditText>
+
+    <ImageView
+        android:id="@+id/admin_1i"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="115dp"
+        android:src="@drawable/admin_sou"
+        android:visibility="gone">
+
+    </ImageView>
+
+
+    <LinearLayout
+        android:id="@+id/admin_lout1"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="155dp"
+        android:background="@color/blackPrimary"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.example.house.view.RoundedImageView
+            android:id="@+id/admin_tou"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="80dp"
+            android:maxHeight="80dp"
+            android:src="@drawable/touxiang"></com.example.house.view.RoundedImageView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/admin_xuehao"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="17104020058"
+                android:textColor="@color/wheat"
+                android:textSize="12dp"></TextView>
+
+            <TextView
+                android:id="@+id/admin_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="张三"
+                android:textColor="@color/wheat"
+                android:textSize="12dp"></TextView>
+
+            <TextView
+                android:id="@+id/admin_nicheng"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="山河"
+                android:textColor="@color/wheat"
+                android:textSize="12dp"></TextView>
+
+            <TextView
+                android:id="@+id/admin_cla"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="17计本二"
+                android:textColor="@color/wheat"
+                android:textSize="12dp"></TextView>
+
+            <TextView
+                android:id="@+id/admin_sushe"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3-132"
+                android:textColor="@color/wheat"
+                android:textSize="12dp"></TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="密码:"
+                    android:textColor="@color/wheat"
+                    android:textSize="12dp"></TextView>
+
+                <TextView
+                    android:id="@+id/admin_mima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="123456"
+                    android:textColor="@color/wheat"
+                    android:textSize="12dp"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="QQ:"
+                    android:textColor="@color/wheat"
+                    android:textSize="12dp"></TextView>
+
+                <TextView
+                    android:id="@+id/admin_QQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="1204628226"
+                    android:textColor="@color/wheat"
+                    android:textSize="12dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/admin_sta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="普通用户"
+                    android:textColor="@color/wheat"
+                    android:textSize="12dp"></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/admin_lout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="375dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <!--        条目-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/admin_1"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/admin_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="密码重置"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/admin_1_q"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/admin_1"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/admin_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="宿舍变更"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/admin_3_q"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/admin_1"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/admin_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="设为管理员"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/admin_2_q"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/admin_1"></ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/admin_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center_vertical"
+                    android:text="删除用户"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/admin_4_q"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/qianjin"></ImageView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></TextView>
+        <!--        结束-->
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

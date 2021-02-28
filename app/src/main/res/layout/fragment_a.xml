@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:htext="http://schemas.android.com/apk/res-auto"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:collapsedTitleGravity="center"
+            app:expandedTitleGravity="center"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="House">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/title_bar_head"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_marginRight="20dp"
+                app:layout_collapseMode="pin" />
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:backButton="true"
+                app:barStyle="ripple"
+                app:layout_collapseMode="pin" />
+
+            <TextView
+                android:id="@+id/tv_about_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="山河与时光的尽头是糖"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_collapseMode="parallax" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="90dp"
+                android:autoLink="all"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:text="https://www.moulem.com/"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_collapseMode="parallax" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--1.快捷入口-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ▎"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快捷入口"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/kuai_1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/xitong"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="教务系统"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/kuai_2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/siliu"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="四六级查询"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/kuai_3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/zhiwang"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="中国知网"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/kuai_4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/shuju"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="万方数据"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/kuai_5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/qikan"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="维普期刊"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/kuai_6"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/vr"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="校园VR"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--        2.常用功能-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ▎"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="常用功能"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/chang_1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/zuji"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="足迹定位"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/chang_2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/ditu"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="简易地图"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/chang_3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/tianqi"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="实时天气"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/chang_4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/fankui"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="问题反馈"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/chang_5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/daiban"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="待办事项"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--                提交-->
+            <LinearLayout
+                android:id="@+id/LL1"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:visibility="gone">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:id="@+id/M1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mtf_image="@mipmap/duanxin"
+                    app:mtf_labelColor="#666"
+                    tools:ignore="MissingConstraints">
+
+
+                    <EditText
+                        android:id="@+id/e1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="-.- 问题反馈"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LL2"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="取消"
+                        app:backgroundTint="#00BCD4"></Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="确认"
+                        app:backgroundTint="#2196F3"></Button>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--提交结束-->
+            <LinearLayout
+                android:id="@+id/LL1_1"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:visibility="gone">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:id="@+id/M1_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mtf_image="@mipmap/diannao"
+                    app:mtf_labelColor="#666"
+                    tools:ignore="MissingConstraints">
+
+
+                    <EditText
+                        android:id="@+id/e1_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="-.- 待办事项"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LL2_1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/no1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="取消"
+                        app:backgroundTint="#00BCD4"></Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/yes1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="确认"
+                        app:backgroundTint="#2196F3"></Button>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LL3_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <com.example.house.myListView
+                    android:id="@+id/Lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></com.example.house.myListView>
+
+
+            </LinearLayout>
+
+
+            <!--        3.其他入口-->
+
+
+            <LinearLayout
+                android:id="@+id/LL3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ▎"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他入口"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LL4"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/qi_1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/qi_1"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="龙喵网"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/qi_2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/qi_2"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="疯狂音乐"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/qi_3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/qi_3"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="pdf处理"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LL5"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/qi_4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/qi_4"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="图片转换"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/qi_5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@mipmap/qi_5"
+                            android:scaleType="fitCenter"></ImageButton>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="UI设计"
+                            android:textColor="@color/black"
+                            android:textSize="10dp"></TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
